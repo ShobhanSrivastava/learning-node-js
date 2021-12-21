@@ -1,0 +1,22 @@
+doctype html
+html(lang="en")
+    head
+        meta(charset="UTF-8")
+        meta(http-equiv="X-UA-Compatible", content="IE=edge")
+        meta(name="viewport", content="width=device-width, initial-scale=1.0")
+        link(rel="stylesheet", href="/css/main.css")
+        title #{pageTitle}
+    body
+        header
+            nav
+                ul.nav_list
+                    li.nav_list_element
+                        a(href="/") Shop
+                    li.nav_list_element 
+                        a(href="/admin/add-product") Add Products
+        
+        main
+            h1 My Shop 
+            ul
+                each product in prod
+                    li #{product.title}
